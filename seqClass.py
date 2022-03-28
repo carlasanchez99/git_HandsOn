@@ -20,10 +20,13 @@ if 'U' in args.seq and 'T' in args.seq: # searches for the nucleotides T and U, 
 if re.search('^[ACGTU]+$', args.seq): # search for ACGTU characters in the sequence args.seq. "+" indicates that they may match one or more times, from the beginning "^" to the end "$" (for line breaks, among others)
     if re.search('T', args.seq): # if it finds T in args.seq, it returns a message it is a DNA seqeunce
         print ('The sequence is DNA')
+        print("\n","A:",round((args.seq.count("A"))/len(args.seq),2),"%","\n","C:",round((args.seq.count("C"))/len(args.seq),2),"%","\n", "G:",round((args.seq.count("G"))/len(args.seq),2),"%","\n","T:",round((args.seq.count("T"))/len(args.seq),2),"%")
     elif re.search('U', args.seq): # if it finds U in args.seq, it returns a message it is a RNA sequence
         print ('The sequence is RNA')
     else: # if it does not find T or U it cannot distingunguish, therefore it returns a message that it may be DNAor RNA
         print ('The sequence can be DNA or RNA')
+        print("\n","A:",round((args.seq.count("A"))/len(args.seq),2),"%","\n","C:",round((args.seq.count("C"))/len(args.seq),2),"%","\n", "G:",round((args.seq.count("G"))/len(args.seq),2),"%")
+
 else: # if it does not find the above characters it returns the following message
     print ('The sequence is not DNA nor RNA')
 
@@ -35,3 +38,4 @@ if args.motif:
         print("FOUND")
     else: # if there is no match of the indicated motif, print "not found"
         print("NOT FOUND")
+
