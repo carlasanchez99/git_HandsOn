@@ -22,7 +22,7 @@ if re.search('^[ACGTU]+$', args.seq): # search for ACGTU characters in the seque
         print("\n","A:",round((args.seq.count("A"))/len(args.seq),2)*100,"%","\n","C:",round((args.seq.count("C"))/len(args.seq),2)*100,"%","\n", "G:",round((args.seq.count("G"))/len(args.seq),2)*100,"%","\n","T:",round((args.seq.count("T"))/len(args.seq),2)*100,"%")
     elif re.search('U', args.seq): # if it finds U in args.seq, it returns a message it is a RNA sequence
         print ('The sequence is RNA')
-	print("\n","A:",round((args.seq.count("A"))/len(args.seq),2)*100,"%","\n","C:",round((args.seq.count("C"))/len(args.seq),2)*100,"%","\n", "G:",round((args.seq.count("G"))/len(args.seq),2)*100,"%","\n","U:",round((args.seq.count("U"))/len(args.seq),2)*100,"%")
+        print("\n","A:",round((args.seq.count("A"))/len(args.seq),2)*100,"%","\n","C:",round((args.seq.count("C"))/len(args.seq),2)*100,"%","\n", "G:",round((args.seq.count("G"))/len(args.seq),2)*100,"%","\n","U:",round((args.seq.count("U"))/len(args.seq),2)*100,"%")
     else: # if it does not find T or U it cannot distingunguish, therefore it returns a message that it may be DNAor RNA
         print ('The sequence can be DNA or RNA')
         print("\n","A:",round((args.seq.count("A"))/len(args.seq),2)*100,"%","\n","C:",round((args.seq.count("C"))/len(args.seq),2)*100,"%","\n", "G:",round((args.seq.count("G"))/len(args.seq),2)*100,"%")
